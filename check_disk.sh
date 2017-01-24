@@ -95,7 +95,7 @@ do
 done
 
 if $DEBUG; then 
-	echo ----- command line switches -----
+	echo "----- command line switches -----"
 	echo REPORT  = "${REPORT}"
 	echo DEBUG   = "${DEBUG}"
 	echo DEBUG_TYPE   = "${DEBUG_TYPE}"
@@ -134,7 +134,7 @@ function fcheck_disk { #DISK, DISK_PERC, DISK_REMAINING, DISK_CRITICAL, DISK_WAR
 	# Check that the function was called with the right number of
 	# parameters - otherwise exit with an error
 	if [ $# -ne 5 ]; then 
-		echo "ERROR: function fcheck_disk expects 4 variables - received $#"
+		echo "ERROR: function fcheck_disk expects 5 variables - received $#"
 		exit 1 #note: can use echo $? to get the exit code of the last command
 	fi
 	DISK=$1
